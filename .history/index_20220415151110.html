@@ -35,6 +35,9 @@
             $("#color-1").val("#622DF7");
             $("#color-2").val("#847CDE");
             $("#color-3").val("#ffffff");
+            $(document).on('keyup', "#color-1", function () {
+                document.documentElement.style.setProperty('--bg-main', $(this).val());
+            });
             $(document).on('change', "#color-1", function () {
                 document.documentElement.style.setProperty('--bg-main', $(this).val());
             });
@@ -43,14 +46,6 @@
             });
             $(document).on('change', "#color-3", function () {
                 document.documentElement.style.setProperty('--text-color', $(this).val());
-            });
-            $("#clear").click(function (e) { 
-                e.preventDefault();
-            $("#color-1").val("#622DF7").change();
-            $("#color-2").val("#847CDE").change();
-            $("#color-3").val("#ffffff").change();
-            
-                
             });
             Coloris({
                 el: '.coloris',
@@ -236,7 +231,7 @@
                 <label for="3" class="mx-2 d-block mt-1">Đổi Màu Chữ:</label>
                 <input type="text" id="color-3" class="coloris" value="" />
             </div>
-            <button type="button" class="btn btn-danger mx-2" id="clear">Clear</button>
+            <button type="button" class="btn btn-danger" id="clear">Tải về</button>
             <button type="button" class="btn btn-primary" id="down">Tải về</button>
         </div>
         <div class="container-fluid py-2" id="export">

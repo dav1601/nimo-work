@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Coloris-main/dist/coloris.min.css">
+        <link rel="stylesheet" href="./Coloris-main/dist/coloris.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -23,45 +23,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
         integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./Coloris-main/dist/coloris.min.js"></script>
+        sc
 
-
+     
     <title>Chính sách Nimo</title>
 </head>
 
 <body>
     <script>
         $(function () {
-            $("#color-1").val("#622DF7");
-            $("#color-2").val("#847CDE");
-            $("#color-3").val("#ffffff");
-            $(document).on('change', "#color-1", function () {
-                document.documentElement.style.setProperty('--bg-main', $(this).val());
-            });
-            $(document).on('change', "#color-2", function () {
-                document.documentElement.style.setProperty('--bg-table', $(this).val());
-            });
-            $(document).on('change', "#color-3", function () {
-                document.documentElement.style.setProperty('--text-color', $(this).val());
-            });
-            $("#clear").click(function (e) { 
-                e.preventDefault();
-            $("#color-1").val("#622DF7").change();
-            $("#color-2").val("#847CDE").change();
-            $("#color-3").val("#ffffff").change();
-            
-                
-            });
-            Coloris({
-                el: '.coloris',
-                format: 'hex',
-                theme: 'large',
-                themeMode: 'dark',
-                clearButton: {
-                    show: true,
-                    label: 'Clear'
-                },
-            });
             const main = document.documentElement.style.setProperty('--bg-main', '#622DF7');
             const table = document.documentElement.style.setProperty('--bg-table', '#847CDE');
             const text = document.documentElement.style.setProperty('--text-color', '#ffffff');
@@ -205,15 +175,6 @@
             background-color: #622DF7;
             bottom: -1px;
         } */
-        label {
-            color: black;
-        }
-
-        input {
-            border-radius: 4px;
-            outline: none;
-            border-color: none;
-        }
 
         #table {
             padding: 15px;
@@ -224,20 +185,10 @@
     </style>
     <div id="wrapper">
         <div class="d-flex justify-content-center align-items-center my-2">
-            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
-                <label for="1" class="mx-2 d-block mt-1">Đổi Màu Nền Chính:</label>
-                <input type="text" class="coloris" id="color-1" value="" />
-            </div>
-            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
-                <label for="2" class="mx-2 d-block mt-1">Đổi Màu Nền Bảng:</label>
-                <input type="text" id="color-2" class="coloris" value="" />
-            </div>
-            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
-                <label for="3" class="mx-2 d-block mt-1">Đổi Màu Chữ:</label>
-                <input type="text" id="color-3" class="coloris" value="" />
-            </div>
-            <button type="button" class="btn btn-danger mx-2" id="clear">Clear</button>
-            <button type="button" class="btn btn-primary" id="down">Tải về</button>
+            <button type="button" class="btn btn-lg btn-primary" id="down">Tải về</button>
+            
+            <button type="button" id="bg-table" class="btn btn-lg btn-primary mx-2">Đổi màu nền bảng</button>
+            <button type="button" id="text-color" class="btn btn-lg btn-primary">Đổi màu chữ</button>
         </div>
         <div class="container-fluid py-2" id="export">
             <header>

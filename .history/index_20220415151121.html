@@ -35,6 +35,9 @@
             $("#color-1").val("#622DF7");
             $("#color-2").val("#847CDE");
             $("#color-3").val("#ffffff");
+            $(document).on('keyup', "#color-1", function () {
+                document.documentElement.style.setProperty('--bg-main', $(this).val());
+            });
             $(document).on('change', "#color-1", function () {
                 document.documentElement.style.setProperty('--bg-main', $(this).val());
             });
@@ -43,14 +46,6 @@
             });
             $(document).on('change', "#color-3", function () {
                 document.documentElement.style.setProperty('--text-color', $(this).val());
-            });
-            $("#clear").click(function (e) { 
-                e.preventDefault();
-            $("#color-1").val("#622DF7").change();
-            $("#color-2").val("#847CDE").change();
-            $("#color-3").val("#ffffff").change();
-            
-                
             });
             Coloris({
                 el: '.coloris',
