@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon"
-        href="https://res.cloudinary.com/vanh-tech/image/upload/v1649967750/201907151563178378869_1599513750510_avatar-2_hbsqzz.png"
-        type="image/png">
+    <link rel="icon" href="https://res.cloudinary.com/vanh-tech/image/upload/v1649967750/201907151563178378869_1599513750510_avatar-2_hbsqzz.png"type="image/png" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./Coloris-main/dist/coloris.min.css">
@@ -47,13 +45,13 @@
             $(document).on('change', "#color-3", function () {
                 document.documentElement.style.setProperty('--text-color', $(this).val());
             });
-            $("#clear").click(function (e) {
+            $("#clear").click(function (e) { 
                 e.preventDefault();
-                $("#color-1").val("#622DF7").change();
-                $("#color-2").val("#847CDE").change();
-                $("#color-3").val("#ffffff").change();
-
-
+            $("#color-1").val("#622DF7").change();
+            $("#color-2").val("#847CDE").change();
+            $("#color-3").val("#ffffff").change();
+            
+                
             });
             Coloris({
                 el: '.coloris',
@@ -130,8 +128,8 @@
         }
 
         .img-2 {
-            right: 385px;
-            top: -40px;
+            right: 25px;
+            top: 15px;
         }
 
         .img-3 {
@@ -140,7 +138,7 @@
         }
 
         .img-4 {
-            right: 600px;
+            right: 174px;
             top: 20px;
         }
 
@@ -155,7 +153,7 @@
         }
 
         .img-7 {
-            right: 0;
+            right: 335px;
             top: -25px;
         }
 
@@ -224,93 +222,37 @@
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
         }
-
-        .main-header {
-            margin-top: 2.5rem !important;
-        }
-
-        @media only screen and (max-width: 1366px) {
-
-            .img-2,
-            .img-6,
-            .img-5 {
-                display: none;
-            }
-
-            .img-4 {
-                right: 14px;
-            }
-
-            .img-3 {
-                left: 192px;
-                top: 20px;
-            }
-
-            .nimo-10 {
-                right: -250px;
-                top: 1px;
-            }
-
-            .img-7 {
-                right: 0px;
-                top: -25px;
-            }
-
-        }
-
-        @media only screen and (max-width: 1080px) {
-            .img-4 {
-                display: none;
-            }
-
-            .img-3 {
-                left: 130px;
-                top: 20px;
-            }
-
-            .nimo-10 {
-                right: -454px;
-                top: 1px;
-            }
-
-            .nimo-9 {
-                display: none;
-            }
-
-
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .img-3 {
-                display: none;
-            }
-
-            .img-1 {
-                left: 65px;
-            }
-        }
+        @media only screen and (max-width: 1336px) {
+    .img-4 , .img-6 , img-5 {
+        display: none;
+    }
+    .img-7 {
+    right: 147px;
+    top: -25px;
+}
+}
     </style>
     <div id="wrapper">
-        <div class="row mx-0 justify-content-center align-items-center my-2">
-            <div class="form-group col-3 mx-4 mt-4 d-flex align-items-center justify-content-center ">
+        <div class="d-flex justify-content-center align-items-center my-2">
+            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
                 <label for="1" class="mx-2 d-block mt-1">Đổi Màu Nền Chính:</label>
                 <input type="text" class="coloris" id="color-1" value="" />
             </div>
-            <div class="form-group col-3 mx-4 mt-4 d-flex align-items-center justify-content-center ">
+            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
                 <label for="2" class="mx-2 d-block mt-1">Đổi Màu Nền Bảng:</label>
                 <input type="text" id="color-2" class="coloris" value="" />
             </div>
-            <div class="form-group col-3 mx-4 mt-4 d-flex align-items-center justify-content-center ">
+            <div class="form-group mx-4 mt-4 d-flex align-items-center justify-content-center ">
                 <label for="3" class="mx-2 d-block mt-1">Đổi Màu Chữ:</label>
                 <input type="text" id="color-3" class="coloris" value="" />
             </div>
-            <button type="button" class="btn btn-danger mx-2 col-1" id="clear">Clear</button>
-            <button type="button" class="btn btn-primary col-2" id="down">Tải về</button>
+            <button type="button" class="btn btn-danger mx-2" id="clear">Clear</button>
+            <button type="button" class="btn btn-primary" id="down">Tải về</button>
         </div>
         <div class="container-fluid py-4" id="export">
             <header>
                 <div class="img-2 position-absolute">
-                    <img src="img/img-5.gif" alt="">
+                    <img src="img/img-5.png" alt="" width="112" height="112">
                 </div>
                 <div class="img-1 position-absolute">
                     <img src="img/img-1.webp" alt="">
@@ -331,8 +273,7 @@
                     <img src="img/img-6.png" alt="">
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
-                    <h1 class="text-center text-uppercase   d-inline-block main-header"
-                        style="margin-right: 6rem!important;">
+                    <h1 class="text-center text-uppercase  mt-4 d-inline-block" style="margin-right: 6rem!important;">
                         Chính sách Nimo</h1>
                 </div>
             </header>
